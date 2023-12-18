@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - Fluch der Karibik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Images/fav-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <nav class="navigation">
+
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+
+        <a href="index.html" class="logo">
+            Movies<span>.hd</span>
+        </a>
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Genre</a></li>
+            <li><a href="#">Kino-Filme</a></li>
+            <li><a href="#">Filme</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <form action="" class="search-box">
+            <input type="text" name="search" placeholder="Search Movie" class="search-input" required>
+            <button type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+    </nav>
+
+  
+    <!--
+        - Movie Banner
+    -->
+
+    <section class="movie-banner">
+
+        <!-- img -->
+        <div class="m-banner-img">
+            <img src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/cover.jpg" alt="">
+        </div>
+
+        <!-- content -->
+        <div class="banner-container">
+
+            <!-- title-container -->
+            <div class="title-container">
+                <!-- title-top -->
+                <div class="title-top">
+                <!-- title -->
+                <div class="movie-title">
+                    <h1>Pirates of the Caribbean Salazar's Revenge</h1>
+                </div>
+                <!-- more-about-movie -->
+                <div class="more-about-movie">
+                    <span class="quality">Full HD</span>
+                    <div class="rating">
+                        8.2 <img src="Images/IMDb-icon.png" alt="imdb">
+                    </div>
+                    <span>28 August 2017</span>
+                    <span>87min</span>
+                </div>
+                <!-- Sprache -->
+                <div class="Sprache">
+                    <span>Deutsch</span>
+                </div>
+
+                </div>
+
+
+                <!-- Title-Bottom -->
+                <div class="title-bottom">
+                    <!-- category -->
+                    <div class="category">
+                        <strong>category</strong><br>
+                        <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#">Thriller</a>
+                    </div>
+                    <!-- trailer-btn -->
+                    <a href="#" class="watch-btn">Watch Trailer</a>
+                </div>
+
+            </div>
+
+            <!-- play-btn -->
+            <div class="play-btn-container">
+                <div class="play-btn">
+                    <a href="#">
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Full-Movie -->
+            <div id="play" class="play">
+                <!-- Movie -->
+                <div class="play-movie">
+                    <video id="m-video">
+                        <source src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/Movie.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="js/jQuery.js"></script>
+
+    <script>
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 20){
+                $('.navigation').addClass('fix-icon');
+            }
+            else{
+                $('.navigation').removeClass('fix-icon');
+            }
+        });
+    </script>
+
+</body>
+</html>
