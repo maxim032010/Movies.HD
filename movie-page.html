@@ -33,7 +33,7 @@
         </a>
 
         <ul class="menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Genre</a></li>
             <li><a href="#">Kino-Filme</a></li>
             <li><a href="#">Filme</a></li>
@@ -97,33 +97,66 @@
                         <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#">Thriller</a>
                     </div>
                     <!-- trailer-btn -->
-                    <a href="#" class="watch-btn">Watch Trailer</a>
+                    <a href="https://youtu.be/Ayu7rlNt_lE?si=CwSEbqXo7i_NmPwu" class="watch-btn">Watch Trailer</a>
                 </div>
 
             </div>
+                  <!-- play-btn -->
+                <div class="play-btn-container">
+                    <div class="play-btn">
+                        <a href="javascript:void">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+               </div>
 
-            <!-- play-btn -->
-            <div class="play-btn-container">
-                <div class="play-btn">
-                    <a href="#">
-                        <i class="fas fa-play"></i>
+                  <!-- Full-Movie -->
+                  <div id="play" class="play">
+                    <!-- close-btn -->
+                    <a href="javascript:void" class="close-movie">
+                        <i class="fas fa-times"></i>
                     </a>
-                </div>
-            </div>
-
-            <!-- Full-Movie -->
-            <div id="play" class="play">
-                <!-- Movie -->
-                <div class="play-movie">
-                    <video id="m-video">
-                        <source src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/Movie.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+                    <!-- Movie -->
+                    <div class="play-movie">
+                        <video id="m-video" controls>
+                            <source src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/Movie.mkv" type="video/mp4">
+                        </video>
+                    </div>
+                  </div>
 
         </div>
 
     </section>
+
+
+    <!-- details -->
+    <section class="movie-details">
+        <strong>Pirates of the Caribbean: Salazar's Revenge</strong>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam earum amet sequi eligendi voluptate accusantium rem, delectus atque consectetur recusandae cupiditate culpa placeat quisquam ex dolor quaerat! Quam, dolorum veritatis.</p>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+        <strong>Screenshots</strong>
+        <!-- screenshots-container -->
+        <div class="screen-s-container">
+            <img src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg" alt="">
+            <img src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg" alt="">
+            <img src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-3.jpg" alt="">
+            <img src="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-4.jpg" alt="">
+        </div>
+    </section>
+
+    <footer>
+        <a href="index.html" class="logo">
+            Movies<span>hd</span>
+        </a>
+
+        <span class="copyright">
+            Copyright 2023 - Movies
+            </a>
+        </span>
+    </footer>
 
 
 
@@ -137,6 +170,22 @@
             else{
                 $('.navigation').removeClass('fix-icon');
             }
+        });
+
+        $(document).on('click','.play-btn a',function(){
+            $('.play').addClass('active-popup');
+        });
+
+        $(document).on('click','.close-movie',function(){
+            $('.play').removeClass('active-popup');
+        });
+
+        $('.play-btn a').click(function(){
+            $('#m-video')[0].play();
+        });
+
+        $('.close-movie').click(function(){
+            $('#m-video')[0].pause();
         });
     </script>
 

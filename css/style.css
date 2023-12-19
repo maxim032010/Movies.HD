@@ -708,3 +708,152 @@ footer .logo {
     background-color: #ffffff18;
     z-index: -1;
 }
+
+#play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15,15,15,0.7);
+    z-index: 108;
+    display: none;
+}
+
+.play-movie {
+    width: 80%;
+}
+
+.play-movie video,
+.play-movie iframe {
+    width: 100%;
+    height: 100%;object-position: center;
+    object-fit: cover;
+    z-index: 108;
+}
+
+.close-movie {
+    position: fixed;
+    right: 60px;
+    top: 60px;
+    font-size: 2rem;
+    color: #e70634;
+    transition: all ease 0.3s;
+}
+
+.close-movie:hover {
+    opacity: 0.6;
+    transition: all ease 0.3s;
+}
+
+.active-popup {
+    display: flex !important;
+}
+
+.movie-details {
+    max-width: 1000px;
+    width: 100%;
+    margin: 30px auto 20px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.movie-details strong {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.movie-details p {
+    color: #747474;
+    margin: 10px 0px;
+}
+
+.screenshots {
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto 50px auto;
+}
+
+.screenshots strong {
+    color: #e70634;
+    font-family: Monoton;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.screen-s-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.screen-s-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* responsive (2) */
+
+@media(max-width:1000px){
+    .watch-btn {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:900px) {
+    .screenshots {
+        width: 90%;
+    }
+}
+
+@media(max-width:750px) {
+    .banner-container {
+        grid-template-columns: 1fr;
+    }
+    .play-btn-container {
+        margin-top: 50px;
+        display: flex;
+    }
+}
+@media(max-width:600px) {
+    .movie-banner {
+        padding: 20px;
+    }
+    .movie-title h1 {
+        font-size: 1.3rem;
+        line-height: 30px;
+    }
+    .title-container {
+        justify-content: flex-start;
+    }
+    .more-about-movie span {
+        margin-top: 10px;
+        display: flex;
+    }
+    .rating {
+        margin-bottom: -10px;
+    }
+    .title-bottom {
+        margin-top: 30px;
+    }
+    .play-btn,
+    .play-btn a {
+        width: 50px;
+        height: 50px;
+    }
+    .movie-details {
+        margin-top: 0px;
+    }
+    .screenshots strong {
+        font-size: 1.5rem;
+    }
+}
